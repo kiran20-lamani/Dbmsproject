@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Inventory Main</title>
+</head>
+<style>
+.con1{
+    background-color:white;
+    height:200px;
+    width:200px;
+    margin-left:130px;
+    margin-top:100px;
+    border-radius:10px;
+    box-shadow: 5px 2px black;
+    float:left;
+}
+.type1{
+    margin-left:28px;
+    padding:20px;
+    font-family:courier;
+}
+.type2{
+        list-style:none;
+        font-size:12px;
+        margin-left:8px;
+        margin-right:5px;
+        text-align: justify;
+        text-justify: inter-word;
+        word-spacing:2px;
+        font-family:cursive;
+        
+}
+.back{
+    
+    height:750px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2016/02/26/899075/bf97d8ead40d4cba75ff0be7322e2516.jpg");
+
+}
+.click1{
+    margin-left:35px;
+    font-size:15px;
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    box-shadow:0px 7px black;
+    padding: 2px 20px;
+    margin-top:25px;
+    color:white;
+    cursor:pointer;
+
+}
+
+.type3{
+    margin-left:32px;
+    padding:20px;
+    font-family:courier;
+}
+.type4{
+    list-style:none;
+    font-size:12px;
+    margin-left:8px;
+    margin-right:5px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing:2px;
+    font-family:cursive;
+    margin-top:5px;
+}
+.click2{
+
+    margin-left:45px;
+    font-size:15px;
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    box-shadow:0px 7px black;
+    padding: 8px 20px;
+    margin-top:15px;
+    color:white;
+    cursor:pointer;
+
+}
+.type5{
+
+    margin-left:30px;
+    padding:20px;
+    font-family:courier;
+    margin-top:1px;
+ }
+.type6{
+    list-style:none;
+    font-size:12px;
+    margin-left:8px;
+    margin-right:5px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing:2px;
+    font-family:cursive;
+    padding:5px;
+    margin-:40px;
+
+}
+.click3{
+    margin-left:50px;
+    font-size:15px;
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    box-shadow:0px 7px black;
+    padding: 5px 20px;
+    margin-top:25px;
+    color:white;
+    cursor:pointer;
+    margin-top:15px;
+}
+.con2{
+    background-color:white;
+    height:200px;
+    width:200px;
+    margin-left:140px;
+    margin-top:130px;
+    border-radius:10px;
+    box-shadow: 5px 2px black;
+    float:left;
+}
+.type7{
+    margin-left:45px;
+    padding:20px;
+    font-family:courier;
+}
+.button1{
+            padding:250px;
+}
+</style>
+<body class="back">
+    <div class="container">
+        <form method="POST" action="/show">
+            {% csrf_token %}
+        <div class="con2">
+            <h4 class="type3">INSTRUMENTS</h4>
+            <li class="type4">Data entry of all medical instruments</li>
+            <input type="submit" value="ENTER" class="click2" name="sunmit">
+        </div>
+    </form>
+       
+       <form method="POST" action="/show1">
+            {% csrf_token %}
+        <div class="con2">
+            <h4 class="type3">DEPARTMENTS</h4>
+            <li class="type4">Data entry of all departments in a hospital</li>
+            <input type="submit"value="ENTER" class="click2" name="sunmit">
+
+        </div>
+    </form>
+       <form method="POST" action="/show2">
+            {% csrf_token %}
+        <div class="con2">
+            <h4 class="type5">CONTARCTS</h4>
+            <li class="type6">Data entry of contracts for equipments.</li>
+            <input type="submit"value="ENTER" class="click3"name="sunmit">
+      </div>
+  </form>
+        <form method="POST" action="/show3">
+            {% csrf_token %}
+        <div class="con2">
+            <h4 class="type5">ORDERS</h4>
+            <li class="type6">Data entry of orders for equipments.</li>
+            <input type="submit"value="ENTER" class="click3" name="sunmit">
+      </div>
+  </form>
+     <form method="POST" action="/show4">
+            {% csrf_token %}
+    <div class="con2">
+            <h4 class="type7">STOCKS</h4>
+            <li class="type4">Data entry of remaining equipments</li>
+            <input type="submit"value="ENTER" class="click2" name="sunmit">
+
+        </div>
+    </form>
+    
+
+</body>
+</html>

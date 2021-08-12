@@ -1,0 +1,110 @@
+<DOCTYPE! HTML>
+<HTML>
+<head>
+  <meta charset="UTF-8">
+  <title>Stocks</title>
+  {% load staticfiles %}
+  <h1>STOCKS</h1>
+</head>
+<style>
+body {
+  background-color: lightblue;
+  background-image:url('https://nordiclifescience.org/wp-content/public_html/2020/02/iStock-1180780708-e1581456282469.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  
+}
+#mov{
+    font-style: italic;
+
+}
+
+
+h1 {
+  color: red;
+  text-align: center;
+  opacity: 0.8;
+  font-family:cursive;
+}
+H3{
+  color:black;
+}
+#k {
+
+  border: 10px solid black;
+  outline-color: green;
+  outline-width: 10p;
+  margin: auto;
+  padding: 20px;
+}
+
+p {
+
+  font-family:courier;
+  font-size: 20px;
+  font-weight:bold;
+}
+#sub{
+  width: 200px;  height: 100px;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.submit{
+
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    font-family:cursive;
+    box-shadow:0px 7px black;
+    font-size:15px;
+    cursor:pointer;
+    color:white;
+    padding: 2px 20px;
+    margin-top:px;
+}
+label{
+  width: 240px;
+  display: inline-block;
+}
+.submit{
+
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    font-family:cursive;
+    box-shadow:0px 7px black;
+    font-size:15px;
+    cursor:pointer;
+    color:white;
+    padding:5px;
+
+}
+
+
+
+</style>
+<body>
+  <p id="mov">Please ensure the consistency and accuracy of the details </p>
+  <form action="/sto" method="POST"  autocomplete="off">
+    {% csrf_token %}
+    <div id="k" class="ss-item-required">  
+          <div class="sto_div"> 
+          <label for="o ID"><H3>Order ID</H3></label>
+          {{form.order_id}}
+        </div>
+          <div class="sto_div1">
+          <label for="D ID"><H3>Department ID</H3></label>
+          {{form.depa_id}}
+        </div>
+          <div class="sto_div2">
+          <label for="Q"><H3>Quantity</H3></label>
+         {{form.quantity}}
+       </div>
+         <div style="text-align:center"><button type="submit" class="submit">Submit</button></div><br>
+        </div><br><br><br>
+    }
+</form>
+
+</body>
+</HTML>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <script src="https://kit.fontawesome.com/d1909f0f33.js" crossorigin="anonymous"></script>
+    
+</head>
+<style>
+
+.back{
+    
+    height:750px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image: url("http://bit.ly/2gPLxZ4");
+
+}
+
+.con1{
+    background-color:white;
+    height:200px;
+    width:200px;
+    margin-left:130px;
+    margin-top:100px;
+    border-radius:10px;
+    box-shadow: 5px 2px black;
+    float:left;
+}
+.type1{
+    margin-left:28px;
+    padding:20px;
+    font-family:courier;
+}
+.type2{
+        list-style:none;
+        font-size:12px;
+        margin-left:8px;
+        margin-right:5px;
+        text-align: justify;
+        text-justify: inter-word;
+        word-spacing:2px;
+        font-family:cursive;
+        margin-top:5px;
+        
+}
+.click1{
+    margin-left:35px;
+    font-size:15px;
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    box-shadow:0px 7px black;
+    padding: 2px 20px;
+    margin-top:25px;
+    color:white;
+    cursor:pointer;
+    margin-top:25px;
+
+}
+
+.type3{
+    margin-left:5px;
+   margin-bottom:5px;
+    font-family:courier;
+    margin-top:1px;
+    list-style:none;
+    font-size:12px;
+    margin-right:5px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing:2px;
+    font-family:cursive;
+
+     
+}
+.type4{
+    list-style:none;
+    font-size:12px;
+    margin-left:8px;
+    margin-right:5px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing:2px;
+    font-family:cursive;
+
+}
+.type5{
+margin-left:5px;
+   margin-bottom:5px;
+    font-family:courier;
+    margin-top:1px;
+    list-style:none;
+    font-size:12px;
+    margin-right:5px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing:2px;
+    font-family:cursive;
+
+}
+.type6{
+margin-left:5px;
+   margin-bottom:5px;
+    font-family:courier;
+    margin-top:1px;
+    list-style:none;
+    font-size:12px;
+    margin-right:5px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing:2px;
+    font-family:cursive;
+
+}
+.type7{
+            margin-left:35px;
+    padding:20px;
+    font-family:courier;
+
+}
+.type8{
+        margin-left:10px;
+    font-family:courier;
+    list-style:none;
+    font-size:12px;
+    margin-right:5px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing:2px;
+    font-family:cursive;
+    padding:10px;    
+
+}
+.click2{
+    margin-left:35px;
+    font-size:15px;
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    box-shadow:0px 7px black;
+    padding: 2px 15px;
+    margin-top:25px;
+    color:white;
+    cursor:pointer;
+    margin-top:5px;
+}
+.click3{
+      margin-left:50px;
+    font-size:15px;
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    box-shadow:0px 7px black;
+    padding: 2px 15px;
+    margin-top:25px;
+    color:white;
+    cursor:pointer;
+    margin-top:25px;
+}
+.wrapper .button{
+ display: inline-block;
+ height: 60px;
+ width:60px;
+float: left;
+margin: 0 5px;
+background: #fff;
+border-radius: 50px;
+cursor: pointer;
+box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+transition: all 0.3s ease-out;
+overflow: hidden;
+margin-left:1200px;
+margin-bottom:100px;
+}
+.wrapper .button:hover{
+width: 200px;
+
+}
+.wrapper .button .icon{
+
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    margin-left:15px;
+}
+.wrapper .button .icon i{
+font-size: 25px;
+line-height: 60px;
+
+}
+.wrapper .button span{
+font-size: 20px;
+font-weight: 500;
+line-height: 60px;
+margin-left: 10px;
+
+}
+</style>
+<body class="back">
+           
+            <div class="container">
+                <form  action="/go">
+                    {% csrf_token %}
+                <div class="con1">
+                    <h4 class="type1">CARDIOLOGY</h4>
+                    <li class="type2">Cardiology is the study and treatment of disorders of the heart and the blood vessels.</li>
+                    <input type="submit"value="INVENTORY"  class="click1" name="sunmit">
+                </div>
+            </form>
+                <form  action="/go">
+                    {% csrf_token %}
+                <div class="con1">
+                    <h4 class="type1">NEUROLOGY</h4>
+                    <li class="type3">Neurology, medical specialty concerned with the nervous system and its functional or organic disorders.</li>
+                    <input type="submit"value="INVENTORY" class="click2"  name="sunmit">
+
+                </div>
+            </form>
+                 <form  action="/go">
+                    {% csrf_token %}
+                <div class="con1">
+                    <h4 class="type1">NEPHROLOGY</h4>
+                    <li class="type4">Nephrology is a specialty of internal medicine that focuses on the treatment of diseases that affect the kidneys.</li>
+                    <input type="submit"value="INVENTORY" class="click2"  name="sunmit">
+
+                </div>
+            </form>
+                 <form  action="/go">
+                    {% csrf_token %}
+                <div class="con1">
+                    <h4 class="type1">GYNAECOLOGY</h4>
+                    <li class="type5">Gynaecology is the medical practice dealing with the health of the female reproductive system.</li>
+                    <input type="submit"value="INVENTORY" class="click2" name="sunmit">
+
+                </div>
+            </form>
+                 <form  action="/go">
+                    {% csrf_token %}
+                <div class="con1">
+                    <h5 class="type1">EMERGENCY CASES</h5>
+                    <li class="type6">An emergency is a situation that poses an immediate risk to health & life.</li>
+                    <input type="submit"value="INVENTORY" class="click1" name="sunmit">
+
+                </div>
+                 </form>
+                 <form  action="/invoice">
+                    {% csrf_token %}
+                    <div class="con1">
+                     <h4 class="type7">RECEIPT</h4>
+                 <li class="type8">Final Contract payment finalization</li>
+                     <input type="submit"value="ENTER" class="click3" name="sunmit">
+
+        </div>
+       </form>
+</body>
+</html>
