@@ -1,0 +1,101 @@
+<DOCTYPE! HTML>
+<HTML>
+<head>
+  <meta charset="UTF-8">
+  <title>ORDERS</title>
+     {% load staticfiles %}
+    <h1>ORDERS</h1>
+</head>
+<style>
+body {
+  background-color: lightblue;
+  background-image:url('https://nordiclifescience.org/wp-content/public_html/2020/02/iStock-1180780708-e1581456282469.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  
+}
+#mov{
+    font-style: italic;
+
+}
+
+
+h1 {
+  color: red;
+  text-align: center;
+  opacity: 0.8;
+  font-family:cursive;
+}
+H3{
+  color:black;
+}
+#k {
+
+  border: 10px solid black;
+  outline-color: green;
+  outline-width: 10p;
+  margin: auto;
+  padding: 20px;
+}
+
+p {
+
+  font-family:courier;
+  font-size: 20px;
+  font-weight:bold;
+}
+#sub{
+  width: 200px;  height: 100px;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+label{
+  width: 240px;
+  display: inline-block;
+}
+.submit{
+
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    font-family:cursive;
+    box-shadow:0px 7px black;
+    font-size:15px;
+    cursor:pointer;
+    color:white;
+    padding: 2px 20px;
+}
+
+
+
+</style>
+<body>
+  <p id="mov">Please ensure the consistency and accuracy of the details </p>
+  <form action="/ord" method="POST" autocomplte="off">
+          {% csrf_token %}
+          <div id="k" class="ss-item-required"><H2 >ORDERS</H2>
+          <div class="ord_div">
+          <label for="I ID"><H3>Instrument ID</H3></label>
+          {{form.Inst_id}}
+        </div>
+        <div class="ord_div1">
+          <label for="C ID"><H3>Contract ID</H3></label>
+          {{form.Con_id}}
+        </div>
+        <div class="ord_div2">
+          <label for="DE ID"><H3>Department ID</H3></label>
+          {{form.Dept_id}}
+        </div>
+        <div class="ord_div3">
+          <label for="OR ID"><H3>Order Quantity</H3></label>
+          {{form.ord_quan}}
+        </div>
+          <div style="text-align:center"><input type="submit" class="submit" value="Submit"></div><br>
+        </div>
+      </form>
+    }
+    </form>     
+  </body>
+</HTML>

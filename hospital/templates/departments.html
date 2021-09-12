@@ -1,0 +1,89 @@
+<DOCTYPE! HTML>
+<HTML>
+<head>
+  <meta charset="UTF-8">
+  <title>Departments</title>
+  {% load staticfiles %}
+  <h1>DEPARTMENTS</h1>
+</head>
+<style>
+body {
+  background-color: lightblue;
+  background-image:url('https://nordiclifescience.org/wp-content/public_html/2020/02/iStock-1180780708-e1581456282469.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  
+}
+#mov{
+    font-style: italic;
+
+}
+
+
+h1 {
+  color: red;
+  text-align: center;
+  opacity: 0.8;
+  font-family:cursive;
+}
+H3{
+  color:black;
+}
+#k {
+
+  border: 10px solid black;
+  outline-color: green;
+  outline-width: 10p;
+  margin: auto;
+  padding: 20px;
+}
+
+p {
+
+  font-family:courier;
+  font-size: 20px;
+  font-weight:bold;
+}
+#sub{
+  width: 200px;  height: 100px;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+label{
+  width: 240px;
+  display: inline-block;
+}
+.submit{
+
+    background-color:rgb(85, 179, 85);
+    border-radius:4px;
+    font-family:cursive;
+    box-shadow:0px 7px black;
+    font-size:15px;
+    cursor:pointer;
+    color:white;
+    padding: 2px 20px;
+}
+
+
+
+</style>
+<body>
+  <p id="mov">Please ensure the consistency and accuracy of the details </p>
+  <form  action="/dep" method="POST"  autocomplete="off">
+            {% csrf_token %}
+    <div id="K" class="ss-item-required"> 
+          
+        <label for="Department Name"><H3>Department Name</H3></label>
+        <div class="typebox1">
+          {{form.dept_name}}
+          </div>
+          <div style="text-align:center"><button type="submit" class="submit">Submit</button></div><br>
+        </div><br><br><br>
+      </form>
+
+</body>
+</HTML>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Department Records</title>
+	{% load staticfiles %}
+	<h2 class="classic">DEPARTMENTS DATA</h2>
+	<link rel="stylesheet" href="{% static '/stylesheet.css' %}"/>
+	<script src="https://kit.fontawesome.com/d1909f0f33.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+ 		function searchrecords()
+ 		{
+ 			var input,table,tr,td,filter,i,txtdata;
+ 			input=document.getElementById("searchtxt");
+ 			filter=input.value.toUpperCase();
+ 			table=document.getElementById("table1");
+ 			tr=table.getElementsByTagName("tr");
+ 			for(i=0;i<tr.length;i++)
+ 			{
+ 				td=tr[i].getElementsByTagName("td")[1];
+ 				if(td)
+ 				{
+
+ 					txtdata=td.innerText;
+ 					if(txtdata.toUpperCase().indexOf(filter)>-1)
+ 					{
+ 						tr[i].style.display="";
+ 					}
+ 					else
+ 					{
+ 						tr[i].style.display="none";
+ 					}
+ 				}
+ 			}
+
+ 		}
+ 		
+ 		function cleartxt()
+ 		{
+ 			document.getElementById("searchtxt").value="";
+ 			document.getElementById("searchtxt").focus();
+ 		}
+ 	</script>
+ 
+</head>
+<style>
+body{
+	 
+    height:750px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image: url("https://img.freepik.com/free-vector/abstract-background-health-care-science-icon-pattern-medical-innovation-concept_44392-177.jpg?size=626&ext=jpg");
+}
+.column4{
+	margin-left:750px;
+}
+.classic{
+
+	font-family: cursive;
+	margin-left: 620px;
+	margin-top: 40px;
+
+}
+.wrapper .button{
+ display: inline-block;
+ height: 60px;
+ width:60px;
+float: left;
+margin: 0 5px;
+background: #fff;
+border-radius: 50px;
+cursor: pointer;
+box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+transition: all 0.3s ease-out;
+overflow: hidden;
+margin-left:1200px;
+margin-bottom:100px;
+}
+.wrapper .button:hover{
+width: 200px;
+
+}
+.wrapper .button .icon{
+
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	border-radius: 50px;
+	box-sizing: border-box;
+	line-height: 60px;
+	margin-left:15px;
+}
+.wrapper .button .icon i{
+font-size: 25px;
+line-height: 60px;
+
+}
+.wrapper .button span{
+font-size: 20px;
+font-weight: 500;
+line-height: 60px;
+margin-left: 10px;
+
+}
+.hello{
+	margin-left:600px;
+	margin-top: 50px;
+}
+.content-table{
+border-collapse:collapse;
+margin:45px 0;
+min-width: 400px;
+margin-left: 540px;
+}
+
+.content-table thead tr{
+	background-color:#009879;
+	color:#ffffff;
+	text-align: left;
+	font-weight:bold;
+
+}
+.content-table th,
+.content-table td{
+	padding: 12px 15px;
+}
+.content-table tbody tr{
+	border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr{
+	background-color: #f3f3f3;
+}
+.search{
+	margin-left:645px;
+	margin-top:20px;
+	background-color:white;
+}
+.green{
+	background-color:green;
+}
+</style>
+<body>
+	<input type="text" class="search" onkeyup="searchrecords();" id="searchtxt" placeholder="Search Records ..."/>
+	<input type="button" class="green" value="clear" onclick="cleartxt();">
+	<table id="table1" class="content-table">
+		<thead>
+			<tr>
+				<th>Department ID</th>
+				<th>Department Name</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for depti in departmenti %}
+			<tr>
+				<td>{{depti.dept_id}}</td>
+				<td>{{depti.dept_name}}</td>
+				
+				<td><a href="/edit1/{{depti.dept_id}}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+			<a href="/delete1/{{depti.dept_id}}">Delete</a></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<center class="submito"><a href="/dep">Add New Record</a></center>
+<div class="wrapper">
+	<div class="button">
+		<div class="icon">
+
+			<form action="/main">
+			<button><i class="fas fa-home"></i></button>
+		</form>
+		</div>
+		<span>Home</span>
+</div>
+
+</body>
+</html>
+
+
+	
